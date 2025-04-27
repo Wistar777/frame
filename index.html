@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.2">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="en"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;Cryptocurrency Quiz&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>body { font-family: Arial, sans-serif; padding: 20px; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>button { margin: 10px 0; padding: 10px; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Cryptocurrency Quiz&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div id="question-container"&gt;&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const questions = [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>question: "Which cryptocurrency is the first and most well-known?",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>options: ["Ethereum", "Bitcoin", "Litecoin", "Ripple"],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>correct: 1</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>question: "What is the process of obtaining new bitcoins in the network called?",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>options: ["Mining", "Staking", "Hardfork", "Airdrop"],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>correct: 0</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>question: "What is blockchain?",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>options: ["A system for data exchange", "A decentralized data ledger", "An app for trading cryptocurrencies", "An encryption algorithm"],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>correct: 1</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>question: "Which cryptocurrency wallet is the safest for storing cryptocurrency?",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>options: ["Online wallet", "Hardware wallet", "Paper wallet", "Exchange wallet"],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>correct: 1</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>question: "What is an ICO in the cryptocurrency world?",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>options: ["A trading platform for cryptocurrencies", "Initial Coin Offering", "An encryption algorithm", "A cryptocurrency blockchain"],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>correct: 1</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>question: "Which cryptocurrency is the second-largest by market capitalization after Bitcoin?",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>options: ["Dogecoin", "Ethereum", "Cardano", "Solana"],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>correct: 1</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>question: "What are 'Decentralized Finance' (DeFi)?",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>options: ["Financial services provided by central banks", "Cryptocurrencies used only for investment", "A system of financial services without intermediaries and central authorities", "A blockchain for government financial control"],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>correct: 2</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>question: "What is the second most popular consensus algorithm in blockchain after Proof of Work (PoW)?",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>options: ["Proof of Stake (PoS)", "Proof of Authority (PoA)", "Delegated Proof of Stake (DPoS)", "Proof of Elapsed Time (PoET)"],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>correct: 0</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>question: "What is a 'hard fork' in cryptocurrency projects?",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>options: ["The process of exchanging cryptocurrency for fiat", "A network update that makes the blockchain incompatible with previous versions", "A method for mining new coins", "A system for protecting against attacks on the network"],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>correct: 1</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>question: "Which cryptocurrency is referred to as 'digital gold'?",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>options: ["Ethereum", "Bitcoin", "Ripple", "Bitcoin Cash"],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>correct: 1</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>];</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>let currentQuestion = 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>let score = 0;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function showQuestion() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const question = questions[currentQuestion];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const container = document.getElementById('question-container');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>container.innerHTML = '';</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const questionElement = document.createElement('p');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>questionElement.textContent = question.question;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>container.appendChild(questionElement);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>question.options.forEach((option, index) =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const button = document.createElement('button');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>button.textContent = option;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>button.onclick = () =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>if (index === question.correct) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>score++;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>currentQuestion++;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>if (currentQuestion &lt; questions.length) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>showQuestion();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>showResult();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>};</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>container.appendChild(button);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function showResult() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const container = document.getElementById('question-container');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>container.innerHTML = `Your result: ${score} out of ${questions.length} correct answers!`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>showQuestion();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+</body>
+</html>
