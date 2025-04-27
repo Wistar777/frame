@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptocurrency Quiz</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        button { margin: 10px 0; padding: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Cryptocurrency Quiz</h1>
+    <div id="question-container"></div>
+
+    <script>
+        const questions = [
+            {
+                question: "Which cryptocurrency is the first and most well-known?",
+                options: ["Ethereum", "Bitcoin", "Litecoin", "Ripple"],
+                correct: 1
+            },
+            {
+                question: "What is the process of obtaining new bitcoins in the network called?",
+                options: ["Mining", "Staking", "Hardfork", "Airdrop"],
+                correct: 0
+            },
+            {
+                question: "What is blockchain?",
+                options: ["A system for data exchange", "A decentralized data ledger", "An app for trading cryptocurrencies", "An encryption algorithm"],
+                correct: 1
+            },
+            {
+                question: "Which cryptocurrency wallet is the safest for storing cryptocurrency?",
+                options: ["Online wallet", "Hardware wallet", "Paper wallet", "Exchange wallet"],
+                correct: 1
+            },
+            {
+                question: "What is an ICO in the cryptocurrency world?",
+                options: ["A trading platform for cryptocurrencies", "Initial Coin Offering", "An encryption algorithm", "A cryptocurrency blockchain"],
+                correct: 1
+            },
+            {
+                question: "Which cryptocurrency is the second-largest by market capitalization after Bitcoin?",
+                options: ["Dogecoin", "Ethereum", "Cardano", "Solana"],
+                correct: 1
+            },
+            {
+                question: "What are 'Decentralized Finance' (DeFi)?",
+                options: ["Financial services provided by central banks", "Cryptocurrencies used only for investment", "A system of financial services without intermediaries and central authorities", "A blockchain for government financial control"],
+                correct: 2
+            },
+            {
+                question: "What is the second most popular consensus algorithm in blockchain after Proof of Work (PoW)?",
+                options: ["Proof of Stake (PoS)", "Proof of Authority (PoA)", "Delegated Proof of Stake (DPoS)", "Proof of Elapsed Time (PoET)"],
+                correct: 0
+            },
+            {
+                question: "What is a 'hard fork' in cryptocurrency projects?",
+                options: ["The process of exchanging cryptocurrency for fiat", "A network update that makes the blockchain incompatible with previous versions", "A method for mining new coins", "A system for protecting against attacks on the network"],
+                correct: 1
+            },
+            {
+                question: "Which cryptocurrency is referred to as 'digital gold'?",
+                options: ["Ethereum", "Bitcoin", "Ripple", "Bitcoin Cash"],
+                correct: 1
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+
+        function showQuestion() {
+            const question = questions[currentQuestion];
+            const container = document.getElementById('question-container');
+            container.innerHTML = '';
+
+            const questionElement = document.createElement('p');
+            questionElement.textContent = question.question;
+            container.appendChild(questionElement);
+
+            question.options.forEach((option, index) => {
+                const button = document.createElement('button');
+                button.textContent = option;
+                button.onclick = () => {
+                    if (index === question.correct) {
+                        score++;
+                    }
+                    currentQuestion++;
+                    if (currentQuestion < questions.length) {
+                        showQuestion();
+                    } else {
+                        showResult();
+                    }
+                };
+                container.appendChild(button);
+            });
+        }
+
+        function showResult() {
+            const container = document.getElementById('question-container');
+            container.innerHTML = `Your result: ${score} out of ${questions.length} correct answers!`;
+        }
+
+        showQuestion();
+    </script>
+</body>
+</html>
